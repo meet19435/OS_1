@@ -1,0 +1,15 @@
+Command Name:history
+
+Command Syntax:history [option]
+
+Options Provided:
+1)histroy
+2)history -c
+3)history --help
+
+Command Description:
+history [option]: history command as the name suggests is used to retrieve the history  of the commands entered by the user in the shell. The history command takes options as -c and the default option. The command history followed by no option is used to retrieve the history of the commands and option -c is used to clear the history file in the system.
+
+Assumptions in history: The history command take not more than one option and in case there are more than one argument, it shows error that too Many arguments have been entered by the user and in case the option is entered other than the default and -c, it shows Invalid command Error.
+
+

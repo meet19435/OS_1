@@ -1,0 +1,15 @@
+Command Name:cd
+
+syntax: cd [option] Arguements
+
+Options Supported:
+1)cd -P arguements
+2)cd --help
+
+cd [option] arguments: cd stands for Change Directory. This command as the name suggests is used to change the working directory with the help of shell. The cd command takes option and arguments as the input. Here the options present are “-P”  and - - help. The command –help takes no argument whereas the -P requires the directory to changed argument. The cd command handles the error such as Too few arguments, Too many arguments and Directory not found error.
+
+The cd -P takes the directory as the argument. -P represents the physical directory or is used to change the physical directory of the shell. The command cd –help is used to generate the help for the command cd. The help of the prints the options handled by the cd command and their documentation. The program also checks that if the directory required to change is present or not and shows the error (if not present) Directory Not Found.
+
+Assumptions in cd: The assumptions assumed for this command is that selection one of the two options provided is necessary otherwise there would an error of two few arguments or invalid arguments. Any other option than the –help and -P will provide Invalid Command. Commands like cd -P .., cd -P / are also handled by this command.
+
+

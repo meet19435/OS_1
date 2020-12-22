@@ -1,0 +1,14 @@
+Command Name: date
+
+Command Syntax: date [option]
+
+options Provided:
+1)date
+2)date --help
+
+Command Description:
+date [option] : The date command is used to get the present date and time. By default this command is displays the local time. It has mainly two options the default date option prints the local time and date and the date – help option is used to get the help for this function.
+
+The errors handled by this commands are too many arguments , Too few arguments and Invalid command. Invalid Command will be prompted whenever the option entered is not present. The reset will be prompted based on the error condition of few or too many arguments.
+
+Assumptions in date: date with no arguments will provide the default local time and date and the –help will provide the help which is specified in the date.txt file.

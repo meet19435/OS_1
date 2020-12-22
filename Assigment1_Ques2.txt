@@ -1,0 +1,72 @@
+﻿											ASSIGNMENT1_QUES2_WRITE_UP
+Overview:
+The purpose of the program is to create a shell or command line that performs 10 commands. Theses 10 commands consists of internal commands and external commands . Internal commands include cd, pwd, echo, exit and history commands. The External commands include cat, ls, mkdir, rm and date command. The internal commands are directly handled by shell whereas the External commands use fork()  system call to create a child process that in return executes another program for each of these commands. There are errors handled by the shell. The wait and execvp() are used to execute the child program and the parent process waits till the child process is terminated. Each of the internal and External commands have 2 option per command.
+
+Commands In the Shell:
+1) cd [option] arguments: cd stands for Change Directory. This command as the name suggests is used to change the working directory with the help of shell. The cd command takes option and arguments as the input. Here the options present are “-P”  and - - help. The command –help takes no argument whereas the -P requires the directory to changed argument. The cd command handles the error such as Too few arguments, Too many arguments and Directory not found error.
+
+The cd -P takes the directory as the argument. -P represents the physical directory or is used to change the physical directory of the shell. The command cd –help is used to generate the help for the command cd. The help of the prints the options handled by the cd command and their documentation. The program also checks that if the directory required to change is present or not and shows the error (if not present) Directory Not Found.
+
+Assumptions in cd: The assumptions assumed for this command is that selection one of the two options provided is necessary otherwise there would an error of two few arguments or invalid arguments. Any other option than the –help and -P will provide Invalid Command. Commands like cd -P .., cd -P / are also handled by this command.
+
+2)pwd [option]:  pwd stands for present Working Directory. As the name suggests this command is used to print the present working directory in which  the user is working. The options present in this command are -P and - - help. Both of these commands are takes no argument and in case there is an argument, the program will show Too many arguments error. It also handles the error like too Few Arguments etc.
+
+The -P command represents the physical Directory and is used to print the present Physical Directory. The command - - help is used to access the help provided for this command and it shows the documentation of these commands.
+
+Assumptions in pwd: The pwd assumes that whenever the command pwd is passed without any option, It uses the default option -P. The  commands other than –help and -P will show Invalid Command error and if more than one arguments provided to this command will show Too many Arguments error.
+
+3)history [option]: history command as the name suggests is used to retrieve the history  of the commands entered by the user in the shell. The history command takes options as -c and the default option. The command history followed by no option is used to retrieve the history of the commands and option -c is used to clear the history file in the system.
+
+Assumptions in history: The history command take not more than one option and in case there are more than one argument, it shows error that too Many arguments have been entered by the user and in case the option is entered other than the default and -c, it shows Invalid command Error.
+
+4) echo [option] Argument: Echo command is just like a print() that is present in many programming languages. Echo basically prints the arguments that is passed after this command. The command has two main options. The first one is “-E” and the second one is the “-n”. Each of these option takes one argument that represents the string to be printed.
+
+The echo command Option -E takes one argument which is a string in the next line.
+The string needs to passed without “” as it is assumed that the last argument passed is a string. The -E command suppresses any of the “/” arguments that are present in the String and prints the string as it is. The second command option “-n” also takes one argument from the user and prints it. The difference between the -n and -E is that -E is followed by a \n statement whereas the -n suppresses this \n statement and thus the
+the string is printed in the same line without \n. 
+
+Assumptions in echo: It is assumed that providing the option is necessary otherwise it would result in a too few arguments error. Also any other option than the -E and -n would result in an Invalid Command Error. Providing more than the required arguments that is the option and string would result in an error. Also the string argument that is to be printed is to be entered by the user in the next line after entering the echo option command.
+
+5)exit option: Exit command as the name suggests is used to terminate the shell execution. It takes input as the status which can be wither 1 0r 0 or It takes –help as an option. The –help option requires no arguments. If more than two arguments are passed to the exit command it shows  Too many arguments Error and in case when options other than 1, 0 or –help are passed it shows invalid command error.
+The command exit + int status exits the program with status 0/1 as specified whereas the the option exit + - -help is used to access the help for this command which contains the description of its option and their documentation.
+
+Assumptions in exit: It is assumed that the exit status can either be 1 or 0 and the help function is written by me and not the one that is present in the terminal.
+
+#Note: For external commands the  arguments/options should be provided in the subsequent line as prompted by the shell. Otherwise it would result in an error.
+
+6) ls [option] file_name: The option ls is used to list all the files, hidden files, Directories that are present in the present Directory. The command ls implemented in this shell has mainly two important options. The first one is the “-a” and the second one is the “-d” option.
+The option -a takes no arguments whereas the option -d takes The name of the file argument.
+
+The option -a is used t list all the files in a directory including all the directories present in that directory. It takes no argument. The option -d is used to check whether the file is present in the directory or not. It takes name of the file/directory as an argument and prints it name If present else it would print an error showing file not found. If no argument is provided to d it shows . As the result. The ls commands needs to be provided with one of the above options otherwise it shows an error showing the too few arguments. Also arguments provided more than the limit will result in an error too many arguments.
+
+Assumptions in ls: It is assumed that ls will always be provided with an option which is either “-a” or “-d” otherwise it would result in an error for Invalid arguments. Also if no file name is provided after the -d command then it would print by default “.” and if the file is not present It would result in an error.
+
+7) cat [option] file_name: cat command stands for concatenate command which is used to concatenate various characters to the provided text file. The concatenate command reads each line of the file and concatenates the character based on the option. The options provided by the shell are “-n” and “-E”. each of these options require a file name that is used to concatenate. If file name is not Provided it would show an error File not entered.
+
+The command cat option -n is used to concatenate numerical value to each line at the front of the line. The Command  cat option “-E” displays $ character at the end of each line. The cat command should be provided with all the required commands otherwise it would prompt an error. If the file entered by the user is not found, then the program will show an error prompting file not found. Too many arguments will also result in an error and options other than “-n” and “-E would result in Invalid Command Error. 
+
+Assumptions in cat: It is assumed that file for cat is already present and it will not work in user input mode. Also the file used to demonstrate the working of cat is present in the submitted folder with name text.txt for reference.
+
+8) date [option] : The date command is used to get the present date and time. By default this command is displays the local time. It has mainly two options the default date option prints the local time and date and the date – help option is used to get the help for this function.
+
+The errors handled by this commands are too many arguments , Too few arguments and Invalid command. Invalid Command will be prompted whenever the option entered is not present. The reset will be prompted based on the error condition of few or too many arguments.
+
+Assumptions in date: date with no arguments will provide the default local time and date and the –help will provide the help which is specified in the date.txt file.
+
+9) mkdir [option] Arguments: mkdir stands for make directory. It is used to make directories in the present directory. The command options for mkdir are “-v” and “-p”.
+The option -v takes the name of the Directory to be created and thus prints a message for a successful creation else it prints a error which could be due to file in already present in the Directory. Command -v can make up to two directories at a time. The command -p takes argument separated by comma and creates the directory in each other. For example bla1,bla2,bla3 would create bla1 in which it would create bla 2 and bla 2 would inturn have bla3 as a directory.
+
+The command shows the errors Directory not created. The reason for this error is that the directory with the same name is already present. Too many arguments and few arguments will be shown when the command is not provided with sufficient arguments or is provided with more than eligible arguments. Invalid command error will be shown when the option entered is not among st the options provided.
+
+Assumptions in mkdir: It is assumed that the maximum number of files that can be created with mkdir is two and the name of these files should not be having “ “ space character between them other wise it would result in an error or wrongful action of the wanted command.
+
+10)rm [option] Arguments: The rm command stands for remove which is used to remove file/directories from the present working directory. The options provided with this command are “-f” and “-i”. They both take file/directory name as an argument. The command -f silently deletes the file/directory without showing an error even if the file/directory with such name is not present. Whereas the “-i” command asks for user confirmation to remove the file/directory and prints is it was deleted successfully or not.
+It even prompts the error whenever either of the options provided in -i Y/N is not selected.
+
+The rm command takes -i and -f as options and providing them is necessary otherwise It would result in an invalid command error or would prompt too few arguments error. More arguments would prompt too many arguments error. If the file is not present in the Directory It would prompt file not Found error.
+
+Assumptions in rm: It can take maximum up to two files and delete them. The file name entered that is to be deleted should not have “ “ space character between them otherwise it would result in an error or wrongful action of the command.
+
+General Errors:
+The cmd or shell will prompt “Invalid Command” error whenever the commands other than the above are executed. If not command is entered it would prompt an error to user to enter the command.
+

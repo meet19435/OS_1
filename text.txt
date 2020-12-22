@@ -1,0 +1,6 @@
+history1
+history
+cd
+pwd
+cat
+ls

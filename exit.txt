@@ -1,0 +1,15 @@
+++++++++++++++++++++++++++++++Exit Command+++++++++++++++++++++++++++
+Command Name: Exit
+
+Command Syntax:exit [option]
+
+options Provided:
+1)exit int(status)
+2)exit --help
+
+Command Description
+exit option: Exit command as the name suggests is used to terminate the shell execution. It takes input as the status which can be wither 1 0r 0 or It takes –help as an option. The –help option requires no arguments. If more than two arguments are passed to the exit command it shows  Too many arguments Error and in case when options other than 1, 0 or –help are passed it shows invalid command error.
+The command exit + int status exits the program with status 0/1 as specified whereas the the option exit + - -help is used to access the help for this command which contains the description of its option and their documentation.
+
+Assumptions in exit: It is assumed that the exit status can either be 1 or 0 and the help function is written by me and not the one that is present in the terminal.
+

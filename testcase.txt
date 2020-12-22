@@ -1,0 +1,72 @@
+history
+cd ..
+cd -P Assignment1_Ques2
+cd Desktop
+cd --help
+cd ..
+pwd
+pwd --help
+pwd -P
+pwd -D
+echo -E
+echo
+echo -n
+history
+history -- help
+history --help
+ls
+-a File
+ls
+-a
+ls
+-d FILES
+ls
+-d MODI
+ls
+-T
+cat
+-n text.txt
+cd Assignment1_Ques2
+cat
+-n text.txtr
+cat
+-n text.txt
+cat
+-E text.txt
+cat
+-g text.txt
+date
+
+date
+--help
+date -
+
+mkdir
+
+cd ..
+mkdir
+-v MODIJI
+mkdir
+-v MODIJI
+mkdir
+-p MODIJI,AMITSHAH
+mkdir
+-p Modiji,AMITSHAH
+mkdir
+-t
+mkdir
+-g MODIJI
+rm
+-f MODIJI
+rm
+-i Modiji
+cd Modiji
+rm
+-i AMITSHAH
+cd ..
+rm
+-f Modiji
+rm
+-g 
+exit 0
+history

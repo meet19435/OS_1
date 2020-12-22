@@ -1,0 +1,16 @@
+Command Name:pwd
+
+Command Syntax:pwd [option] Arguement
+
+Options Provided:
+1)pwd
+2)pwd -P
+3)pwd --help
+
+Course Description
+pwd [option]:  pwd stands for present Working Directory. As the name suggests this command is used to print the present working directory in which  the user is working. The options present in this command are -P and - - help. Both of these commands are takes no argument and in case there is an argument, the program will show Too many arguments error. It also handles the error like too Few Arguments etc.
+
+The -P command represents the physical Directory and is used to print the present Physical Directory. The command - - help is used to access the help provided for this command and it shows the documentation of these commands.
+
+Assumptions in pwd: The pwd assumes that whenever the command pwd is passed without any option, It uses the default option -P. The  commands other than –help and -P will show Invalid Command error and if more than one arguments provided to this command will show Too many Arguments error.
+
